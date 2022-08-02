@@ -1,1 +1,27 @@
+package OTP_Generator;
+import java.io.*;
+import java.util.*;
+
+public class OTP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       int length=4;
+   	System.out.println(otp_gen(length));      
+	}
+	static char[] otp_gen(int length)
+	{
+	   	System.out.println("Your OTP is alphanumeric");
+	   	String num="0123456789abcdefghijklmnopqrstuvwxyz";
+	   	Random r=new Random();
+	   	char otp[]=new char[length];
+	   for(int i=0;i<length;i++)
+	   {
+		   otp[i]=num.charAt(r.nextInt(num.length()));
+	   }
+	   return otp;
+
+	}
+
+}
 
